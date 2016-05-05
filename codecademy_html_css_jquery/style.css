@@ -1,0 +1,62 @@
+html, body {
+font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  border-left: 2px solid #00f28f;
+  font-size: 48px;
+  font-weight: 400;
+  padding-left: 20px;
+}
+
+.main {
+  margin-top: 80px;/*zorgt voor afstand tussen 'threadly' (head) en invoerveld*/
+}
+
+ form input { /* = voor form element selecteer input element binnen form element  */
+   background-color: #f0f0f0;
+   border-left: 2px solid #fff;
+   border: none; /* alleen border links*/
+   font-size: 36px;
+   padding: 20px; /*om te voorkomen dat tekst precies tegen border staat*/
+   width: 100%; /*om ervoor te zorgen dat form gehele kolom in beslag waarin het zich bevindt*/
+   transition: background 2s, border-left 2s;
+   /* transition zorgt voor een geleidelijke overgang van de kleur in het invoerveld*/
+ }
+
+form input:focus { /*:focus zorgt ervoor dat onderstaande alleen van toepassing is wanneer het invoerveld wordt gebruikt*/
+  background: #fff;
+  border-left: 2px solid #000;
+  box-shadow: none;
+  outline: none; /*verwijdert blauwe border dat vaak verschijnt bij een input veld*/
+}
+
+ button.btn { /*selecteert de button met class btn*/
+   background: transparent;
+   border: none;
+   color: #00f28f;
+   cursor: pointer; /*zorgt ervoor dat cursor een pointer (vinger) wanneer je boven de button 'hovert'*/
+   font-size: 36px;
+   padding: 20px 24px; /*eerste nummer=top en bottom, tweede nummer= links en rechts*/
+   transition: background 2s, color 2s; /*zorgt voor een geleidelijk overgang van kleur*/
+
+ }
+
+ button.btn:hover {
+   background: #00f28f;
+   color: #fff;
+ }
+
+ .comments { /*zorgt voor afstand tussen invoerveld en opmerkingen*/
+   margin-top: 20px;
+   list-style: none; /* weghalen bullets*/
+   padding-left: 0px; /* browser voegen automatisch padding toe in geval van li elementen
+   hiermee haal je dat weg*/
+ }
+
+ li {
+   padding-left: 20px;
+   border-left: 2px solid #000;
+   font-size: 36px;
+   margin: 0 0 36px; /* nummer refereert alleen aan bottom margin
+ }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- Bootstrap is CSS framework, wordt vaak gebruikt voor buttons, dropdown menu's en andere CSS componenten`-->
+    <!-- link CDN altijd in head zetten, net zoals links css document en google fonts-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <title></title>
+  </head>
+  <body>
+    <header class="header">
+      <!--  container = row-based, handig voor Responsive design er wordt gebruik gemaakt van Bootstrap-->
+      <div class="container">
+        <div class="row">
+          <!-- in row zitten nu 12 kolommen, xs-12 => als scherm kleiner is dan 768 pixels, neemt deze div alle kolommen in beslag-->
+          <!-- als scherm groter is dan 768 px, dan zorgt md-12 ervoor dat alle 12 kollommen worden gebruikt -->
+          <!-- Grid documentatie lezen op bootstrap site  -->
+          <div class="col-xs-12 col-md-12">
+            <h1>threadly</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="main">
+      <div class="container">
+        <div class="row">
+          <form class="form">
+            <!-- xs-8 => wanneer scherm kleiner is dan 700 pixels, worden 8 kolommen gebruikt -->
+            <!-- md 10 => wanneer scherm groter is, worden 10 kolommen gebruikt -->
+            <div class="col-xs-8 col-md-10">
+              <!-- placeholder text => standaard teks in invoerveld -->
+              <input id="comment "type="text" placeholder="share your thoughts">
+            </div>
+            <!-- xs-4 + xs-8 van vorige div = 12 totaal=> dit zorgt ervoor dat rij uitkomt op 12 kolommen, wat overeenkomt met 1e div. Standaard? -->
+            <!-- md 2 + md-10 van vorige div = 12 totaal => dit zorgt ervoor dat rij uitkomt op 12 kolommen, wat overeenkomt met 1e div. Standaard?  -->
+            <div class="col-xs-4 col-md-2">
+              <button type="submit" class="btn">post</button>
+            </div>
+          </form>
+        </div>
+        <!-- id toegevoegd zodat deze in JS bestand kan worden gebruikt -->
+        <ul class="comments" id="comments">
+          <li>Have you felt it?</li>
+          <li>There has been an awakening</li>
+        </ul>
+      </div>
+    </div>
+      <!-- niet vergeten: links naar js bestanden altijd als laatste in 'body' zetten, zodat HTML eerst laadt-->
+      <!-- onderstaande link gekopieerd van code.jquery.com, minified versie 'integrity' tekst weglaten-->
+      <!-- BELANGRIJK: eerst CDN link naar jquery vermelden, daarna pas linken naar js bestand,
+          dit zorgt ervoor dat jquery eerst wordt geladen en dan pas het .js bestand wordt toegepast.
+          Als jquery niet geladen is, werkt het .js bestand niet!!!-->
+      <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+      <script src="script.js"></script>
+  </body>
+</html>
